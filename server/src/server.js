@@ -31,13 +31,13 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/message', messageRouter)
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '../../client/dist')))
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../../client/dist/index.html'))
-    })
-}
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "../client/dist")));
+  
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
+    });
+  }
 
 httpServer.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`)
