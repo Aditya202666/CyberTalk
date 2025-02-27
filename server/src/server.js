@@ -9,12 +9,10 @@ import userRouter from './routes/user.route.js'
 import messageRouter from './routes/message.route.js'
 import { app, httpServer } from './config/socket.io.config.js';
 
-import path from 'path'
 
 const port = process.env.PORT || 3212
 const origin = process.env.ORIGIN ||  'http://localhost:5173'
 
-const __dirname = path.resolve()
 
 connectDb()
  
@@ -31,13 +29,6 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/message', messageRouter)
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../client/dist")));
-  
-    app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
-    });
-  }
 
 httpServer.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`)

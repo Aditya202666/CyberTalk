@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import { useAuthStore } from "./authStore";
 import { useMessageStore } from "./messageStore";
 
-const server = import.meta.env.MODE === "development" ? "http://localhost:3212" : "/";
+const server = import.meta.env.SERVER;
 
 export const useWebSocketStore = create((set, get) => ({
   socket: null,
