@@ -87,7 +87,7 @@ export const sendMessage = async (req, res) => {
 
         return res.json({ success: true, data: message, message: `Message sent successfully.` });
     } catch (error) {
-        console.log(`Error in sendMessage: ${error.message}`);
+        console.log(`error in sendMessage: ${error.message}`);
         return res.status(500).json({ success: false, message: error.message });
     }
 };

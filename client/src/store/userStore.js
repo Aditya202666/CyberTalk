@@ -31,13 +31,13 @@ export const useUserStore = create((set, get)=>({
 
     searchUsers :async(data)=>{
         try {
-            console.log(data)
+            // console.log(data)
             const res = await axiosInstance.get(`user/searchUsers/${data.searchTerm}`)
-            console.log(res)
+            // console.log(res)
             if(res.data.success){
                 set({searchFriends: res.data.data})
                 set({searchResults: true})
-                console.log(get().searchFriends)
+                // console.log(get().searchFriends)
             }
             
         } catch (error) {
@@ -88,7 +88,7 @@ export const useUserStore = create((set, get)=>({
             const res = await axiosInstance.put('user/changeAvatar', data)
             if(res.data.success) {
                 toast.success(res.data.message)
-                console.log(res.data)
+                // console.log(res.data)
                 set({authUser: {...authUser, avatar: res.data.data}})
                 return true
             }

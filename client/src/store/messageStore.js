@@ -50,7 +50,7 @@ export const useMessageStore = create((set, get) => ({
         `/message/sendMessage/${selectedFriend.id}`,
         {...data, username:selectedFriend.username}
       );
-      console.log('here 22', selectedFriend.userName) // this is undefined
+      // console.log('here 22', selectedFriend.userName) // this is undefined
       if (res.data.success) {
         set({
           messages: {

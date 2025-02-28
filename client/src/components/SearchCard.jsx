@@ -10,7 +10,7 @@ const SearchCard = ({ avatar, username, id }) => {
      setSelectedFriend({ avatar, username, id })
      getMessages({username, id})
    }
-   console.log('here')
+  //  console.log('here')
    return (
      <div
        className={`flex gap-2 items-center border-2  shadow-md rounded-xl bg-base-300 p-2  mx-1 hover:scale-95  hover:border-secondary transition-all duration-500 
