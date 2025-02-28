@@ -3,7 +3,7 @@ import { useUserStore } from "../store/userStore";
 import FriendCard from "./FriendCard";
 import { useThemeStore } from "../store/themeStore";
 import { useMessageStore } from "../store/messageStore";
-import SearchUserInput from "./searchUserInput";
+import SearchUserInput from "./SearchUserInput";
 import SearchCard from "./SearchCard";
 
 const Sidebar = () => {
