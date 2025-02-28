@@ -10,12 +10,12 @@ const Navbar = () => {
   
   const navigate = useNavigate();
 
-  const [theme, setTheme] = useState(currentTheme === 'dracula')
+  const [theme, setTheme] = useState(currentTheme === 'light')
 
   const handleThemeChange = ()=>{
 
     if(theme) changeTheme('synthwave')
-    else changeTheme('dracula')
+    else changeTheme('light')
     setTheme(!theme)
   }
 
