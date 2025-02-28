@@ -9,9 +9,13 @@ import userRouter from './routes/user.route.js'
 import messageRouter from './routes/message.route.js'
 import { app, httpServer } from './config/socket.io.config.js';
 
+import path from "path" 
+
 
 const port = process.env.PORT || 3212
 const origin = process.env.ORIGIN ||  'http://localhost:5173'
+
+const _dirname =  path.resolve()
 
 
 connectDb()
@@ -26,8 +30,13 @@ app.use(cors({
 app.use(cookieParser())
 
 app.use('/api/v1/auth', authRouter)   
-app.use('/api/v1/user', userRouter)
+app.use('/api/v1/user', userRouter) 
 app.use('/api/v1/message', messageRouter)
+
+app.use(express.static(path.join(_dirname, '/client/dist')))
+app.get("*",  (_, res)=>{
+    res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"))
+})
 
 
 httpServer.listen(port, () => {

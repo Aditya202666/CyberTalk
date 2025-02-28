@@ -2,8 +2,9 @@ import { create } from "zustand";
 import { io } from "socket.io-client";
 import { useAuthStore } from "./authStore";
 import { useMessageStore } from "./messageStore";
+import { SERVER_URL } from "../lib/constants";
 
-const server = import.meta.env.SERVER;
+const server = SERVER_URL;
 
 export const useWebSocketStore = create((set, get) => ({
   socket: null,
