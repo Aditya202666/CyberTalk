@@ -1,11 +1,12 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "server/src/server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "dev": "nodemon server/src/server.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "start": "node server/src/server.js"
   },
   "keywords": [],
   "author": "",
