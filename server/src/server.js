@@ -33,17 +33,14 @@ app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/user', userRouter) 
 app.use('/api/v1/message', messageRouter)
 
-// app.use(express.static(path.join(_dirname, '/client/dist')))
-// app.get("*",  (_, res)=>{
-//     res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"))
-// })
 
-app.use(express.static(path.join(__dirname, "../client/dist")));
+// app.use(express.static(path.join(__dirname, "../client/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
-  });
-
+//   app.get("*", (req, res) => {
+//     console.log('i am here')
+//     res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
+//   });
+ 
 
 httpServer.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`)

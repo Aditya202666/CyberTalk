@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "CyberTalk": "file:..",
     "axios": "^1.7.9",
+    "CyberTalk": "file:..",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
