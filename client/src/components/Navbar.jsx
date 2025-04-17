@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuthStore } from "../store/authStore";
 import { KeyRound, Lightbulb, LogOut, LucideMessageSquareQuote, Moon, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +37,7 @@ const Navbar = () => {
     >
       <div className=" max-w-screen-2xl w-full flex justify-between items-center">
 
-      <div v className=" flex align-middle gap-2 cursor-pointer group">
+      <div className=" flex align-middle gap-2 cursor-pointer group">
         <div className="size-10 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-secondary/20  transition-colors">
           <LucideMessageSquareQuote className="size-5 text-accent animate-bounce group-hover:text-secondary" />
         </div>{" "}
