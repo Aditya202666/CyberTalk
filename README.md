@@ -3,7 +3,7 @@
 ### Dummy/Test Account
 
  - username: "Aditya1", Password: "123123"
- - username: "Aditya20266", Password: "123123"
+ - username: "Aditya2", Password: "123123"
 
 **CyberTalk** is a secure, real-time one-to-one messaging app built on the MERN stack. It supports text and image messaging with modern features such as email-based OTP authentication, avatar generation, user profile customization, toast notifications, and live online/offline presence tracking.
 
