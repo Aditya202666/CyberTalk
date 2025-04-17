@@ -50,7 +50,7 @@ const ProfilePage = () => {
       <div className="relative max-w-3xl w-full mx-auto p-4 md:pt-4 lg:pt-8 py-0">
         <div
           className="absolute top-4 md:top-8 lg:top-12 left-8 size-12 bg-accent/10 rounded-full flex items-center justify-center group hover:bg-secondary/20 transition-colors"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/')}
         >
           <ArrowLeft className="size-7 text-accent group-hover:text-secondary animate-bounce" />
         </div>
